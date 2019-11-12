@@ -1,7 +1,7 @@
 import os
 import time
 
-print('This script removes old MITM script, and then downloads the new updated one from GitHub\n\n')
+print('This script removes the old MITM script, and then downloads the new updated one from GitHub\n')
 
 print('Checking if there is a MITM folder in Documents')
 if os.path.isdir('/root/Documents/MITM'):
@@ -16,8 +16,9 @@ if os.path.isdir('/root/Documents/MITM'):
         else:
             os.system('sudo mv /root/Documents/MITM /root/Documents/MITM-old')
 
-print('\nStarting download in 2 seconds and placing the folder in Documents')
+print('\nStarting download in 2 seconds and placing the folder in /root/Documents')
 time.sleep(2)
 
 os.system('sudo git clone https://github.com/Cripyy/MITM /root/Documents/MITM')
 print('\n\nDownload complete, stopping script')
+time.sleep(2)
